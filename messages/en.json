@@ -1,0 +1,36 @@
+{
+  "header": {
+    "title": "João Pedro do Prado Moretti",
+    "projects": "Projects"
+  },
+  "main": {
+    "me": {
+      "name": "João Pedro do Prado Moretti",
+      "role": "Junior Full Stack Developer",
+      "cv": "Resume"
+    },
+    "about": {
+      "title": "About Me",
+      "description": "Junior Full Stack Developer."
+    },
+    "education": {
+      "title": "Education",
+      "institution": "UNIFAE",
+      "level": "Higher Education Course",
+      "degree": "Engineering of Software",
+      "duration": "2024 - 2028"
+    },
+    "experience": {
+      "title": "Experience",
+      "positions": {
+        "none": {
+          "title": "No experience yet",
+          "enterprise": "No experience yet",
+          "type": "Internship/Junior Position",
+          "duration": "",
+          "location": ""
+        }
+      }
+    }
+  }
+}
