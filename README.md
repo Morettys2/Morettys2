@@ -7,11 +7,11 @@
   ### ✨ About Me:
   <h4>- 🤠 I'm a Software Engineering student.</h4>
   <h4>- 🤖 Junior Full Stack Developer.</h4>
-  <h4>- 👾 Pronouns: He/Him</h4>
+  <h4>- 🖾 Pronouns: He/Him</h4>
   <h4>- 💻 Learning Front and Back-end</h4>
-  <h4>- 🎮 Music • Games • Gym • Code</h4>
+  <h4>- 🎶 Music • Games • Gym • Code</h4>
 
-  ### 📫 Connect with me:
+  ### 📧 Connect with me:
 
   <a href="mailto:m0rettyy20@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" />
@@ -34,5 +34,5 @@
   [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Morettys2&layout=compact&theme=tokyonight&hide_border=true)](https://github.com/Morettys2/github-readme-stats)
 
   <br>
-  <img src="https://media1.tenor.com/m/isdsI-XKBzUAAAAd/infernape-fire.gif" min-width="400px" max-width="400px" width="400px" alt="Infernape Fire GIF">
+  <img src="https://media1.tenor.com/m/YTRwVLsSmcgAAAAd/lucario-pokemon.gif" min-width="400px" max-width="400px" width="400px" alt="Lucario Pokemon GIF">
 </div>
