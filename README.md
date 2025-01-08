@@ -7,7 +7,7 @@
   ### ✨ About Me:
   <h4>- 🤠 I'm a Software Engineering student.</h4>
   <h4>- 🤖 Junior Full Stack Developer.</h4>
-  <h4>- 🖾 Pronouns: He/Him</h4>
+  <h4>- 👾 Pronouns: He/Him</h4>
   <h4>- 💻 Learning Front and Back-end</h4>
   <h4>- 🎶 Music • Games • Gym • Code</h4>
 
