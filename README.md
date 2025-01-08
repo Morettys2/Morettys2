@@ -4,7 +4,7 @@
 
 <div style="max-width: 600px;" align="center">
   <p>
-    📚 Software Engineering student at UNIFAE • Junior Full Stack Developer<br>
+    📚 Junior Full Stack Developer<br>
     👾 Pronouns: He/Him<br>
     💻 Learning Front and Back-end<br>
     🎶 Music • Games • Gym • Code<br>
