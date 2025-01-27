@@ -1,5 +1,5 @@
 <p align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=nunito&size=25&pause=1000&color=1E90FF&random=false&width=435&lines=Hi%2C+there!+I'm+Moretty." alt="Typing SVG" /></a></p>
-<img src="https://media1.tenor.com/m/YTRwVLsSmcgAAAAd/lucario-pokemon.gif" align="right" width="40%">
+<img src="https://media1.tenor.com/m/rf71abuteZcAAAAd/batman-caped-crusader-caped-crusader.gif" align="right" width="40%">
 <br>
 
 <div style="max-width: 600px;" align="center">
