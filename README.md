@@ -28,6 +28,3 @@
 </p>
 
 <hr>
-
-[![Morettys2 GitHub stats](https://github-readme-stats.vercel.app/api?username=Morettys2&count_private=true&show_icons=true&theme=dracula&hide_border=true)](https://github.com/Morettys2/github-readme-stats)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Morettys2&layout=compact&theme=dracula&hide_border=true)](https://github.com/Morettys2/github-readme-stats)
