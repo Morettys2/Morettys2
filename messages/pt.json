@@ -11,23 +11,23 @@
     },
     "about": {
       "title": "Sobre Mim",
-      "description": "Desenvolvedor Full Stack Junior."
+      "description": "Futuro Engenheiro de Software explorando o desenvolvimento web. Entusiasta de novas tecnologias e focado em resolver problemas reais através do código."
     },
     "education": {
       "title": "Formação",
       "institution": "UNIFAE",
       "level": "Curso Superior",
       "degree": "Engenharia de Software",
-      "duration": "2024 - 2028"
+      "duration": "2024 - 2027"
     },
     "experience": {
       "title": "Experiência",
       "positions": {
         "none": {
-          "title": "Sem experiência ainda",
-          "type": "Estágio/Posição Junior",
-          "duration": "",
-          "location": ""
+          "title": "Desenvolvedor Full Stack (Projetos Pessoais)",
+          "type": "Prática Deliberada & Portfólio",
+          "duration": "2024 - Atualmente",
+          "location": "Remoto / GitHub"
         }
       }
     }

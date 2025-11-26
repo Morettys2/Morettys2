@@ -6,10 +6,11 @@ import { Download } from "lucide-react";
 
 const DownloadCVButton = () => {
   const t = useTranslations();
+  
   return (
     <a
-      href="/Joao Pedro do Prado Moretti.pdf"
-      download
+      href="/curriculo.pdf" 
+      download="Joao_Pedro_Moretti_CV.pdf" 
     >
       <Button className="w-fit space-x-2">
         <Download className="w-4 h-4"/>

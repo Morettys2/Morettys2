@@ -11,24 +11,24 @@
     },
     "about": {
       "title": "About Me",
-      "description": "Junior Full Stack Developer."
+      "description": "Future Software Engineer exploring web development. Tech enthusiast focused on solving real-world problems through code."
     },
     "education": {
       "title": "Education",
       "institution": "UNIFAE",
-      "level": "Higher Education Course",
-      "degree": "Engineering of Software",
-      "duration": "2024 - 2028"
+      "level": "Bachelor's Degree",
+      "degree": "Software Engineering",
+      "duration": "2024 - 2027"
     },
     "experience": {
       "title": "Experience",
       "positions": {
         "none": {
-          "title": "No experience yet",
-          "enterprise": "No experience yet",
-          "type": "Internship/Junior Position",
-          "duration": "",
-          "location": ""
+          "title": "Full Stack Developer (Personal Projects)",
+          "enterprise": "Self-Employed",
+          "type": "Independent Development & Portfolio",
+          "duration": "2024 - Present",
+          "location": "Remote / GitHub"
         }
       }
     }

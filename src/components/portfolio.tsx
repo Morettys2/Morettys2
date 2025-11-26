@@ -53,8 +53,8 @@ export function PortfolioComponent() {
             </Link>
           </div>
           <div className="flex items-center space-x-4">
-            <Popover>
-              <PopoverTrigger>
+<Popover>
+              <PopoverTrigger asChild>
                 <Button variant="ghost">
                   {locale === "en" ? (
                     <US title="United States" className="w-8 h-8" />
@@ -97,11 +97,11 @@ export function PortfolioComponent() {
             <p className="text- mb-4">{t("main.me.role")}</p>
             <DownloadCVButton />
           </div>
-          <img
-            src="/profile.png"
-            alt="João Pedro do Prado Moretti"
-            className="rounded-full md:w-1/4"
-          />
+      <img
+        src="/profile.png"
+        alt="João Pedro do Prado Moretti"
+        className="rounded-full md:w-1/4 aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 border-4 border-gray-100 dark:border-gray-800 shadow-xl"
+      />
         </section>
 
         <section className="mb-10 px-2 md:p-0">
