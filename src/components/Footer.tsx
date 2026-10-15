@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -11,7 +11,6 @@ const links = [
     label: "LinkedIn",
     Icon: Linkedin,
   },
-  { href: "https://x.com/Moretty361832", label: "X / Twitter", Icon: Twitter },
   { href: "mailto:m0rettyy20@gmail.com", label: "Email", Icon: Mail },
 ];
 
