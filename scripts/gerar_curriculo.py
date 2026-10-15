@@ -45,9 +45,10 @@ CONTATOS = [
 ]
 
 RESUMO = (
-    "Desenvolvedor Full Stack na Unimed Leste Paulista, criando e mantendo portais "
-    "web com Next.js, NestJS, TypeScript, React, Node.js e Oracle. Estudante de "
-    "Engenharia de Software na UNIFAE (conclusão prevista em 2027)."
+    "Desenvolvedor Full Stack e estudante de Engenharia de Software. Gosto de "
+    "entender o problema antes de escrever código e de entregar soluções simples, "
+    "bem feitas e fáceis de manter. Sou curioso, aprendo rápido e estou sempre "
+    "estudando novas tecnologias para evoluir como profissional."
 )
 
 EXPERIENCIAS = [
@@ -61,17 +62,6 @@ EXPERIENCIAS = [
             "Back-end com Node.js, NestJS e TypeScript; front-end com React e Next.js.",
             "Integração com banco de dados Oracle e escrita de consultas SQL.",
             "Versionamento de código e trabalho em equipe com Git/GitHub.",
-        ],
-    },
-    {
-        "cargo": "Desenvolvedor Full Stack",
-        "empresa": "Projetos pessoais",
-        "periodo": "2024 – atual",
-        "local": "Remoto",
-        "itens": [
-            "Aplicações web com Next.js, NestJS e TypeScript, publicadas no GitHub.",
-            "Portfólio pessoal em Next.js, TypeScript e Tailwind CSS, bilíngue (PT/EN), "
-            "hospedado na Vercel.",
         ],
     },
 ]
