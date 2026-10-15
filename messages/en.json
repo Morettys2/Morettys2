@@ -1,17 +1,30 @@
 {
   "header": {
-    "title": "João Pedro do Prado Moretti",
-    "projects": "Projects"
+    "title": "João Pedro Moretti",
+    "projects": "Projects",
+    "theme": "Toggle theme",
+    "language": "Change language"
   },
   "main": {
     "me": {
+      "greeting": "Hi, I'm",
       "name": "João Pedro do Prado Moretti",
-      "role": "Junior Full Stack Developer",
-      "cv": "Resume"
+      "role": "Full Stack Developer",
+      "current": "Currently at Unimed Leste Paulista",
+      "summary": "I build end-to-end web applications with Node.js, TypeScript and React, integrated with Oracle databases.",
+      "cv": "Download resume",
+      "contact": "Get in touch"
     },
     "about": {
       "title": "About Me",
-      "description": "Future Software Engineer exploring web development. Tech enthusiast focused on solving real-world problems through code."
+      "description": "Full Stack Developer and Software Engineering student. I like to understand the problem before writing code and to ship solutions that are simple, well built and easy to maintain. I'm always learning new technologies to keep growing as a professional."
+    },
+    "skills": {
+      "title": "Tech Stack",
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "database": "Databases",
+      "tools": "Tools"
     },
     "education": {
       "title": "Education",
@@ -22,15 +35,26 @@
     },
     "experience": {
       "title": "Experience",
+      "current": "Current",
       "positions": {
-        "none": {
-          "title": "Full Stack Developer (Personal Projects)",
-          "enterprise": "Self-Employed",
-          "type": "Independent Development & Portfolio",
+        "unimed": {
+          "title": "Full Stack Developer",
+          "company": "Unimed Leste Paulista",
+          "duration": "2026 - Present",
+          "location": "São João da Boa Vista - SP, Brazil",
+          "description": "Building and maintaining full stack web applications, from Node.js and TypeScript back-ends to React interfaces, integrated with Oracle databases and versioned with Git."
+        },
+        "personal": {
+          "title": "Full Stack Developer",
+          "company": "Personal Projects",
           "duration": "2024 - Present",
-          "location": "Remote / GitHub"
+          "location": "Remote / GitHub",
+          "description": "Study and portfolio projects to practice full stack web development, API architecture and clean code practices."
         }
       }
+    },
+    "footer": {
+      "rights": "All rights reserved."
     }
   }
 }

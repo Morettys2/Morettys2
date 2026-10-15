@@ -17,8 +17,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "João Pedro do Prado Moretti",
-  description: "Junior Full Stack Developer",
+  title: "João Pedro Moretti | Full Stack Developer",
+  description:
+    "Portfólio de João Pedro do Prado Moretti, Desenvolvedor Full Stack (Node.js, TypeScript, React e Oracle).",
 };
 
 export default async function RootLayout({
@@ -30,8 +31,16 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        {/* Aplica o tema antes da renderização para evitar o "flash" claro */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}`,
+          }}
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}

@@ -10,7 +10,7 @@
   <tr>
     <td width="60%" valign="middle">
       <p align="center">
-        🚀&nbsp; Full Stack Developer<br>
+        🚀&nbsp; Full Stack Developer @ Unimed Leste Paulista<br>
         👾&nbsp; Pronouns: He/Him<br>
         💻&nbsp; Building with NestJS, Next.js & PHP<br>
         🗄️&nbsp; Working daily with Oracle, MySQL & SQL Server

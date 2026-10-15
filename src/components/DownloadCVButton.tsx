@@ -9,10 +9,10 @@ const DownloadCVButton = () => {
   
   return (
     <a
-      href="/curriculo.pdf" 
-      download="Joao_Pedro_Moretti_CV.pdf" 
+      href="/Joao_Pedro_Moretti_CV.pdf"
+      download="Joao_Pedro_Moretti_CV.pdf"
     >
-      <Button className="w-fit space-x-2">
+      <Button className="w-fit gap-2">
         <Download className="w-4 h-4"/>
         <span>{t("main.me.cv")}</span>
       </Button>

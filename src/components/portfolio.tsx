@@ -8,9 +8,14 @@ import {
   GraduationCap,
   CodeXml,
   User,
+  Layers,
+  MapPin,
+  Mail,
+  Github,
+  Linkedin,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "use-intl";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import US from "country-flag-icons/react/3x2/US";
@@ -19,138 +24,260 @@ import useLocale from "@/hooks/useLocale";
 import DownloadCVButton from "./DownloadCVButton";
 import { FooterComponent } from "./Footer";
 
+const GITHUB_URL = "https://github.com/Morettys2";
+const LINKEDIN_URL =
+  "https://www.linkedin.com/in/jo%C3%A3o-pedro-do-prado-moretti-891083227/";
+const EMAIL = "m0rettyy20@gmail.com";
+
+const skills = {
+  frontend: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
+  backend: ["Node.js", "NestJS", "PHP"],
+  database: ["Oracle", "MySQL", "SQL Server"],
+  tools: ["Git", "GitHub", "Postman"],
+} as const;
+
+const positions = [
+  {
+    key: "unimed",
+    current: true,
+    stack: ["Node.js", "TypeScript", "React", "Oracle", "Git"],
+  },
+  {
+    key: "personal",
+    current: false,
+    stack: ["Next.js", "NestJS", "TypeScript", "Tailwind CSS"],
+  },
+] as const;
+
+function Tag({ children }: { children: React.ReactNode }) {
+  return (
+    <li className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
+      {children}
+    </li>
+  );
+}
+
+function SectionTitle({
+  icon: Icon,
+  children,
+}: {
+  icon: React.ElementType;
+  children: React.ReactNode;
+}) {
+  return (
+    <h3 className="mb-6 flex items-center gap-2 text-2xl font-bold">
+      <Icon className="h-6 w-6 text-muted-foreground" />
+      {children}
+    </h3>
+  );
+}
+
 export function PortfolioComponent() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const t = useTranslations();
   const { locale, switchLocale: changeLanguage } = useLocale();
 
   useEffect(() => {
-    // Verifica o armazenamento local para persistir a preferência de tema
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setIsDarkMode(savedTheme === "dark");
-    }
+    // O script inline do layout já aplicou a classe antes da renderização
+    setIsDarkMode(document.documentElement.classList.contains("dark"));
   }, []);
 
-  useEffect(() => {
-    // Salva a preferência do tema no armazenamento local
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-  }, [isDarkMode]);
+  const toggleTheme = () => {
+    const next = !isDarkMode;
+    setIsDarkMode(next);
+    document.documentElement.classList.toggle("dark", next);
+    localStorage.setItem("theme", next ? "dark" : "light");
+  };
 
   return (
-    <div
-      className={`min-h-screen ${isDarkMode ? "bg-black text-white" : "bg-white text-black"}`}
-    >
-      <main className="max-w-4xl mx-auto space-y-8">
-        <header className="p-4 flex justify-between items-center border-b">
-          <div className="flex items-center space-x-4">
-            <CodeXml />
-            <h1 className="text-2xl font-bold">{t("header.title")}</h1>
-            <Link href="https://github.com/Morettys2?tab=repositories">
-              <Button variant="ghost" className="text-lg">
-                {t("header.projects")}
-              </Button>
-            </Link>
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="sticky top-0 z-10 border-b bg-background/80 backdrop-blur">
+        <nav className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
+          <div className="flex items-center gap-2">
+            <CodeXml className="h-6 w-6" />
+            <span className="hidden font-bold sm:inline">
+              {t("header.title")}
+            </span>
           </div>
-          <div className="flex items-center space-x-4">
-<Popover>
+          <div className="flex items-center gap-1">
+            <Link href={`${GITHUB_URL}?tab=repositories`} target="_blank">
+              <Button variant="ghost">{t("header.projects")}</Button>
+            </Link>
+            <Popover>
               <PopoverTrigger asChild>
-                <Button variant="ghost">
+                <Button variant="ghost" aria-label={t("header.language")}>
                   {locale === "en" ? (
-                    <US title="United States" className="w-8 h-8" />
+                    <US title="United States" className="h-6 w-6" />
                   ) : (
-                    <BR title="Brazil" className="w-8 h-8" />
+                    <BR title="Brazil" className="h-6 w-6" />
                   )}
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="mx-4 flex flex-col space-y-4 w-fit">
+              <PopoverContent className="mx-4 flex w-fit flex-col space-y-2 p-2">
                 <Button
-                  className="text-lg space-x-2 p-4"
+                  className="justify-start gap-2"
                   variant="ghost"
                   onClick={() => changeLanguage("en")}
                 >
-                  <US title="United States" className="w-8 h-8" />
-                  <span className="text-lg font-medium">EN-US</span>
+                  <US title="United States" className="h-6 w-6" />
+                  <span className="font-medium">EN-US</span>
                 </Button>
                 <Button
-                  className="text-lg space-x-2 p-4"
+                  className="justify-start gap-2"
                   variant="ghost"
                   onClick={() => changeLanguage("pt")}
                 >
-                  <BR title="Brazil" className="w-8 h-8" />
-                  <span className="text-lg font-medium">PT-BR</span>
+                  <BR title="Brazil" className="h-6 w-6" />
+                  <span className="font-medium">PT-BR</span>
                 </Button>
               </PopoverContent>
             </Popover>
-            <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className={`p-2 rounded-full ${isDarkMode ? "bg-white text-black" : "bg-black text-white"}`}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              aria-label={t("header.theme")}
             >
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            </Button>
           </div>
-        </header>
+        </nav>
+      </header>
 
-        <section className="flex flex-col-reverse md:flex-row items-center justify-between space-x-8 md:space-x-0 space-y-8 md:space-y-0 mb-12 p-2 md:p-0">
-          <div className="md:w-1/2">
-            <h2 className="text-2xl md:text-4xl font-bold mb-2">{t("main.me.name")}</h2>
-            <p className="text- mb-4">{t("main.me.role")}</p>
-            <DownloadCVButton />
+      <main className="mx-auto max-w-4xl space-y-20 px-4 py-16 md:py-24">
+        <section className="space-y-6">
+          <p className="font-mono text-sm text-muted-foreground">
+            {t("main.me.greeting")}
+          </p>
+          <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
+            {t("main.me.name")}
+          </h1>
+          <div className="space-y-2">
+            <p className="text-xl font-semibold md:text-2xl">
+              {t("main.me.role")}
+            </p>
+            <p className="inline-flex items-center gap-2 text-muted-foreground">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+              </span>
+              {t("main.me.current")}
+            </p>
           </div>
-      <img
-        src="/profile.png"
-        alt="João Pedro do Prado Moretti"
-        className="rounded-full md:w-1/4 aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 border-4 border-gray-100 dark:border-gray-800 shadow-xl"
-      />
+          <p className="max-w-2xl text-lg text-muted-foreground">
+            {t("main.me.summary")}
+          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <DownloadCVButton />
+            <a href={`mailto:${EMAIL}`}>
+              <Button variant="outline" className="gap-2">
+                <Mail className="h-4 w-4" />
+                {t("main.me.contact")}
+              </Button>
+            </a>
+            <Link href={GITHUB_URL} target="_blank" aria-label="GitHub">
+              <Button variant="ghost" size="icon">
+                <Github className="h-5 w-5" />
+              </Button>
+            </Link>
+            <Link href={LINKEDIN_URL} target="_blank" aria-label="LinkedIn">
+              <Button variant="ghost" size="icon">
+                <Linkedin className="h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </section>
 
-        <section className="mb-10 px-2 md:p-0">
-          <h3 className="text-2xl font-bold mb-4 flex w-fit border-b-4 text-justify">
-            <User className="mr-2" /> {t("main.about.title")}
-          </h3>
-          <p className="mb-4 ml-8 text-lg decoration-current">
+        <section>
+          <SectionTitle icon={User}>{t("main.about.title")}</SectionTitle>
+          <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
             {t("main.about.description")}
           </p>
         </section>
 
-        <section className="mb-12 p-2 md:p-0">
-          <h3 className="text-2xl font-bold mb-4 flex items-center w-fit border-b-4">
-            <GraduationCap className="mr-2" /> {t("main.education.title")}
-          </h3>
-          <div className="ml-8">
-            <p className="text-lg font-normal">{t("main.education.level")}</p>
-            <h4 className="text-xl font-semibold">
+        <section>
+          <SectionTitle icon={Briefcase}>
+            {t("main.experience.title")}
+          </SectionTitle>
+          <ol className="relative space-y-10 border-l border-border pl-6">
+            {positions.map(({ key, current, stack }) => (
+              <li key={key} className="relative">
+                <span
+                  className={`absolute -left-[31px] top-1.5 h-3 w-3 rounded-full ring-4 ring-background ${
+                    current ? "bg-green-500" : "bg-muted-foreground"
+                  }`}
+                />
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <p className="font-mono text-sm text-muted-foreground">
+                    {t(`main.experience.positions.${key}.duration`)}
+                  </p>
+                  {current && (
+                    <span className="rounded-full border border-green-500/40 px-2 py-0.5 text-xs font-medium text-green-600 dark:text-green-400">
+                      {t("main.experience.current")}
+                    </span>
+                  )}
+                </div>
+                <h4 className="mt-1 text-xl font-semibold">
+                  {t(`main.experience.positions.${key}.title`)}
+                  <span className="text-muted-foreground">
+                    {" · "}
+                    {t(`main.experience.positions.${key}.company`)}
+                  </span>
+                </h4>
+                <p className="mt-1 inline-flex items-center gap-1 text-sm text-muted-foreground">
+                  <MapPin className="h-3.5 w-3.5" />
+                  {t(`main.experience.positions.${key}.location`)}
+                </p>
+                <p className="mt-3 max-w-3xl leading-relaxed">
+                  {t(`main.experience.positions.${key}.description`)}
+                </p>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {stack.map((tech) => (
+                    <Tag key={tech}>{tech}</Tag>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section>
+          <SectionTitle icon={Layers}>{t("main.skills.title")}</SectionTitle>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {Object.entries(skills).map(([group, items]) => (
+              <div key={group} className="rounded-lg border p-4">
+                <p className="mb-3 text-sm font-semibold text-muted-foreground">
+                  {t(`main.skills.${group}`)}
+                </p>
+                <ul className="flex flex-wrap gap-2">
+                  {items.map((tech) => (
+                    <Tag key={tech}>{tech}</Tag>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <SectionTitle icon={GraduationCap}>
+            {t("main.education.title")}
+          </SectionTitle>
+          <div className="rounded-lg border p-4">
+            <p className="font-mono text-sm text-muted-foreground">
+              {t("main.education.duration")}
+            </p>
+            <h4 className="mt-1 text-xl font-semibold">
               {t("main.education.degree")}
             </h4>
-            <p className="text-lg">{t("main.education.institution")}</p>
-            <p className="text-sm text-gray-600">
-              {t("main.education.duration")}
+            <p className="text-muted-foreground">
+              {t("main.education.level")} · {t("main.education.institution")}
             </p>
           </div>
         </section>
-
-        <section className="mb-12 p-2 md:p-0">
-          <h3 className="text-2xl font-bold mb-4 flex items-center border-b-4 w-fit">
-            <Briefcase className="mr-2" /> {t("main.experience.title")}
-          </h3>
-          <div className="space-y-6 ml-8">
-            <div>
-              <h4 className="text-xl font-semibold">
-                {t("main.experience.positions.none.title")}
-              </h4>
-              <p className="text-lg">
-                {t("main.experience.positions.none.type")}
-              </p>
-              <p className="text-sm text-gray-600">
-                {t("main.experience.positions.none.duration")}
-              </p>
-              <p>{t("main.experience.positions.none.location")}</p>
-            </div>
-          </div>
-        </section>
-
-        <FooterComponent isDarkMode={isDarkMode} />
       </main>
+
+      <FooterComponent />
     </div>
   );
 }

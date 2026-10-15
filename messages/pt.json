@@ -1,35 +1,60 @@
 {
   "header": {
-    "title": "João Pedro do Prado Moretti",
-    "projects": "Projetos"
+    "title": "João Pedro Moretti",
+    "projects": "Projetos",
+    "theme": "Alternar tema",
+    "language": "Alterar idioma"
   },
   "main": {
     "me": {
+      "greeting": "Olá, eu sou",
       "name": "João Pedro do Prado Moretti",
-      "role": "Desenvolvedor Full Stack Junior",
-      "cv": "Currículo"
+      "role": "Desenvolvedor Full Stack",
+      "current": "Atualmente na Unimed Leste Paulista",
+      "summary": "Construo aplicações web de ponta a ponta com Node.js, TypeScript e React, integradas a bancos de dados Oracle.",
+      "cv": "Baixar currículo",
+      "contact": "Entrar em contato"
     },
     "about": {
       "title": "Sobre Mim",
-      "description": "Futuro Engenheiro de Software explorando o desenvolvimento web. Entusiasta de novas tecnologias e focado em resolver problemas reais através do código."
+      "description": "Desenvolvedor Full Stack e estudante de Engenharia de Software. Gosto de entender o problema antes de escrever código e de entregar soluções simples, bem feitas e fáceis de manter. Estou sempre estudando novas tecnologias para evoluir como profissional."
+    },
+    "skills": {
+      "title": "Tecnologias",
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "database": "Banco de dados",
+      "tools": "Ferramentas"
     },
     "education": {
       "title": "Formação",
       "institution": "UNIFAE",
-      "level": "Curso Superior",
+      "level": "Bacharelado",
       "degree": "Engenharia de Software",
       "duration": "2024 - 2027"
     },
     "experience": {
       "title": "Experiência",
+      "current": "Atual",
       "positions": {
-        "none": {
-          "title": "Desenvolvedor Full Stack (Projetos Pessoais)",
-          "type": "Prática Deliberada & Portfólio",
+        "unimed": {
+          "title": "Desenvolvedor Full Stack",
+          "company": "Unimed Leste Paulista",
+          "duration": "2026 - Atualmente",
+          "location": "São João da Boa Vista - SP",
+          "description": "Desenvolvimento e manutenção de aplicações web full stack, do back-end em Node.js e TypeScript às interfaces em React, com integração a bancos de dados Oracle e versionamento com Git."
+        },
+        "personal": {
+          "title": "Desenvolvedor Full Stack",
+          "company": "Projetos Pessoais",
           "duration": "2024 - Atualmente",
-          "location": "Remoto / GitHub"
+          "location": "Remoto / GitHub",
+          "description": "Projetos de estudo e portfólio para praticar desenvolvimento web full stack, arquitetura de APIs e boas práticas de código."
         }
       }
+    },
+    "footer": {
+      "rights": "Todos os direitos reservados."
     }
   }
 }
