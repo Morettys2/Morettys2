@@ -19,7 +19,7 @@ const useLocale = () => {
   const switchLocale = (value: Locale) => {
     startTransition(() => {
       setUserLocale(value);
-      setLocale(value); 
+      setLocale(value);
     });
   };
 

@@ -42,7 +42,7 @@
           "company": "Unimed Leste Paulista",
           "duration": "2026 - Present",
           "location": "São João da Boa Vista - SP, Brazil",
-          "description": "Building and maintaining full stack web applications, from Node.js and TypeScript back-ends to React interfaces, integrated with Oracle databases and versioned with Git."
+          "description": "Building new web portals and maintaining existing ones, from Node.js, NestJS and TypeScript back-ends to React and Next.js front-ends, integrated with an Oracle database."
         },
         "personal": {
           "title": "Full Stack Developer",

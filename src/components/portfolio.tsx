@@ -31,16 +31,16 @@ const EMAIL = "m0rettyy20@gmail.com";
 
 const skills = {
   frontend: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
-  backend: ["Node.js", "NestJS", "PHP"],
-  database: ["Oracle", "MySQL", "SQL Server"],
-  tools: ["Git", "GitHub", "Postman"],
+  backend: ["Node.js", "NestJS", "Python", "PHP"],
+  database: ["Oracle", "PostgreSQL", "MySQL", "SQL Server"],
+  tools: ["Git", "GitHub", "Docker", "Postman"],
 } as const;
 
 const positions = [
   {
     key: "unimed",
     current: true,
-    stack: ["Node.js", "TypeScript", "React", "Oracle", "Git"],
+    stack: ["Next.js", "NestJS", "TypeScript", "React", "Node.js", "Oracle", "Git"],
   },
   {
     key: "personal",
